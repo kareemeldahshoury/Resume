@@ -173,7 +173,7 @@
   </div>
 
 
-  <div class="mt-5 mb-5">
+  <div class="mt-5 pb-10">
     <a href="/" class="mr-10 font-semibold text-yellow-neon bg-pink-neon border border-4 border-black rounded-lg p-2.5">Home</a>
   </div>
 </div>
