@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    working_dir: /app/server
+    command: ["python", "app.py"]
+    ports:
+      - "3000:3000"
+    environment:
+      - FLASK_ENV=production
+    volumes:
+      - ~/.aws:/root/.aws:ro
+    restart: always
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
+

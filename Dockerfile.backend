@@ -1,0 +1,16 @@
+# Use Python base image
+FROM python:3.10 AS backend
+
+WORKDIR /app
+
+# Copy backend files
+COPY src/lib/server/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src/lib/server /app/server
+
+# Expose Flask API port
+EXPOSE 3000
+
+# Run Flask backend
+CMD ["python", "/app/server/app.py"]

@@ -6,8 +6,8 @@ import logging
 from mangum import Mangum
 
 
-app = Flask(__name__)
-CORS(app, supports_credentials=True)
+app = Flask(__name__, static_folder="static", static_url_path="/")
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
@@ -37,18 +37,18 @@ except dynamodb.meta.client.exceptions.ResourceNotFoundException:
   table.wait_until_exists()
 
 
-@app.route("/", methods=["GET"])
+@app.route("/api", methods=["GET"])
 def visit():
-  print(request.cookies)
-  if request.cookies.get("visited"):
-    print("Visitor has already been counted.")
+  # print(request.cookies)
+  # if request.cookies.get("visited"):
+  #   print("Visitor has already been counted.")
 
-    try:
-      response = table.get_item(Key={"visitors": "visitor_count"})
-      count = response.get("Item", {}).get("count", 0)
-      return jsonify({"visits": count})
-    except ClientError as err:
-      return jsonify({"error": str(err)}), 500
+  #   try:
+  #     response = table.get_item(Key={"visitors": "visitor_count"})
+  #     count = response.get("Item", {}).get("count", 0)
+  #     return jsonify({"visits": count})
+  #   except ClientError as err:
+  #     return jsonify({"error": str(err)}), 500
 
   try:
     response = table.get_item(Key={"visitors": "visitor_count"})
@@ -57,18 +57,16 @@ def visit():
     new_count = count + 1
     table.put_item(Item={"visitors": "visitor_count", "count": new_count})
 
-    response = make_response(jsonify({"visits": new_count}))
-    response.set_cookie("visited", "true", max_age=3600, samesite='Lax')  # Cookie expires in 1 hour
-    print(f"Visitor count (backend): {new_count}")
+    # response = make_response(jsonify({"visits": new_count}))
+    # response.set_cookie("visited", "true", max_age=30, samesite='Lax')  # Cookie expires in 1 hour
+    # print(f"Visitor count (backend): {new_count}")
     print(request.cookies)
     return response
   except ClientError as err:
         return jsonify({"error": str(err)}), 500
 
-
-
   
 lambda_handler = Mangum(app)
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0', port=5173)
+    app.run(host="0.0.0.0", port=3000, debug=True)
