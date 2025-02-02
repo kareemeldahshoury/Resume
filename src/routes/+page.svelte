@@ -1,37 +1,27 @@
 <script>
   import { onMount } from "svelte";
-  let visits = 0;
-  let actual_visits;
-  // let visits = 0;
-  // async function getVisits() {
-  //   try {
-  //     const res = await fetch("http://127.0.0.1:5173/");
-  //     if(!res.ok) {
-  //       throw new Error("HTTP Error");
-  //     }
-  //     const data = await res.json();
-  //     visits = data.visits;
-  //     console.log("Visitor Count:", visits);
-  //   } catch(error) {
-  //     console.log("Error", error)
-  //   }
-  // }
+  import { writable } from 'svelte/store';
+  
+  // Makes it so that if there is an item in local storage to set the 
+  // visits to that otherwise to set it to 0
+  const initialVisits = typeof localStorage !== 'undefined' ?
+    parseInt(localStorage.getItem('visits')) || 0 : 
+    0;
+  let visits = writable(initialVisits);
+
+
   onMount(() => {
     // Check if visitor has already been counted in this session
     if (!sessionStorage.getItem("visited")) {
-      fetch("http://127.0.0.1:5173")  // Replace with your API URL
+      fetch("http://127.0.0.1:5173")  // Replace with AWS API Gateway URL
         .then((response) => response.json())
-        .then((data) => {visits = data.visits; localStorage.setItem("visits", data.visits)})
+        .then((data) => {$visits = data.visits; localStorage.setItem("visits", data.visits)})
         .catch((error) => console.error("Error updating visitor count:", error));
 
       // Mark as visited in sessionStorage
       sessionStorage.setItem("visited", "true");
     }
   });
-  // if (visits != 0){
-  //   actual_visits = visits;
-  // }
-  // $: visits; // Ensures that visists is marked as reactive
 </script>
 
 
@@ -50,6 +40,6 @@
             {:else}
             <h1> Visitor Count: {actual_visits}</h1>
             {/if} -->
-            <h1> Visitor Count: {visits}</h1>
+            <h1> Visitor Count: {$visits}</h1>
           </div>
 </div>
