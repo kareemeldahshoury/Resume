@@ -3,10 +3,13 @@ FROM python:3.10 AS backend
 
 WORKDIR /app
 
-# Copy backend files
-COPY src/lib/server/requirements.txt .
+# Copies file with all requriements
+COPY src/lib/server/requirements.txt . 
+
+# Installs all requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
+# the first is the path on the local machine and the other is the path on the docker imaage
 COPY src/lib/server /app/server
 
 # Expose Flask API port

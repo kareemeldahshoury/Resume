@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-frontend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: resume-frontend
+  template:
+    metadata:
+      name: resume-frontend
+      labels:
+        app: resume-frontend
+    spec:
+      containers:
+        - name: resume-frontend
+          image: kareemeldahshoury/resume-frontend:latest # Your image repository
+          ports:
+            - containerPort: 80
+          env:
+            - name: RESUME_BACKEND_SERVICE
+              value: resume-backend  # Kubernetes service name
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: resume-frontend-service  # External access to frontend
+spec:
+  type: LoadBalancer  # Or ClusterIP if internal
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: resume-frontend

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-backend-deployment
+spec:
+  replicas: 3 
+  selector:
+    matchLabels:
+      app: resume-backend
+  template:
+    metadata:
+      name: resume-backend
+      labels:
+        app: resume-backend
+    spec:
+      containers:
+        - name: resume-backend
+          image: kareemeldahshoury/resume-backend:latest
+          ports:
+            - containerPort: 3000  # Matches the Docker Compose file
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: resume-backend
+  labels:
+    app: resume-backend
+spec:
+  type: LoadBalancer
+  selector:
+    app: resume-backend
+  ports:
+    - port: 3000
