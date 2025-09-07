@@ -46,29 +46,29 @@
 </script> -->
 
 <div class="min-h-screen flex flex-col items-center justify-center p-4">
-  <h1 class="mb-8 sm:mb-12 md:mb-16 lg:mb-20 font-honk text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center">
+  <h1 class="mb-8 sm:mb-12 md:mb-16 lg:mb-20 font-dm-mono text-light-purple text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center">
     Kareem Eldahshoury
   </h1>
   
   <div class="mt-5 flex flex-col sm:flex-row gap-4 sm:gap-0 items-center justify-center w-full max-w-4xl px-4">
     <a
       href="/experiences"
-      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-semibold text-yellow-neon bg-pink-neon rounded-lg p-2.5 border border-4 border-black text-center hover:scale-105 transition-transform"
+      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
       >Experiences</a
     >
     <a
       href="/projects"
-      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-semibold text-yellow-neon bg-pink-neon rounded-lg p-2.5 border border-4 border-black text-center hover:scale-105 transition-transform"
+      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
       >Projects</a
     >
     <a
       href="/full"
-      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-semibold text-yellow-neon bg-pink-neon rounded-lg p-2.5 border border-4 border-black text-center hover:scale-105 transition-transform"
+      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
       >Full Resume</a
     >
     <a
       href="/about"
-      class="w-full sm:w-auto font-semibold text-yellow-neon bg-pink-neon rounded-lg p-2.5 border border-4 border-black text-center hover:scale-105 transition-transform"
+      class="w-full sm:w-auto font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
       >About</a
     >
   </div>
