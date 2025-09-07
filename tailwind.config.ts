@@ -23,7 +23,8 @@ export default {
         "lightest-purple": '#C0C9EE', // Pink-Neon
         "yellow-neon": '#FFFF80',
         'dull-pink': '#A64D79',
-        'burnt-sienna': '#9B3922'
+        'burnt-sienna': '#9B3922',
+        'bg-beige': "#FBFBFB"
       },
       fontFamily: {
         honk: ["Honk", "serif"], // Add your font

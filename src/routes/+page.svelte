@@ -1,4 +1,4 @@
-<!-- <script context="module">
+<script context="module">
   // Disable pre-rendering so the API call runs on the client
   export const prerender = false;
 </script>
@@ -23,7 +23,7 @@
       //pageRefreshed.set(true);
 
       // Fetch from the API to update the visitor count
-      fetch("/api", { cache: "no-store" })
+      fetch("http://localhost:3000/api", { cache: "no-store" })
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -33,8 +33,8 @@
         .then((data) => {
           console.log("Visitor Count Response:", data);
           // Assuming your data returns an object with an Item key that contains count
-          visits.set(data.Item.count);
-          localStorage.setItem("visits", data.Item.count);
+          visits.set(data.visits);  // Changed from data.Item.count
+          localStorage.setItem("visits", data.visits); 
         })
         .catch((error) =>
           console.error("Error updating visitor count:", error)
@@ -43,7 +43,7 @@
       console.log("Page already loaded in this tab; skipping API call.");
     }
   });
-</script> -->
+</script>
 
 <div class="min-h-screen flex flex-col items-center justify-center p-4">
   <h1 class="mb-8 sm:mb-12 md:mb-16 lg:mb-20 font-dm-mono text-light-purple text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center">
@@ -73,7 +73,9 @@
     >
   </div>
 
-  <!-- <div class="mt-12 sm:mt-16 md:mt-20">
-    <h1 class="text-center text-sm sm:text-base"> Visitor Count: {$visits} </h1>
-  </div> -->
+  <div class="mt-8 sm:mt-12 md:mt-16 lg:mt-20 px-4">
+    <h1 class="font-dm-mono font-semibold text-medium-purple text-center text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium">
+      Visitor Count: {$visits}
+    </h1>
+  </div>
 </div>
