@@ -17,9 +17,9 @@ export default {
         'pink-4': '#9900F0',
         'pink-5': '#6420AA',
         'darkest-purple': '#3D365C', // Yellow-1
-        'dark-purple': '#555879', // Orange-1
+        'dark-purple': '#6F70A1', // Orange-1
         'light-purple': '#A2AADB', // Orange-2
-        'medium-purple': '#98A1BC', // Orange-red
+        'medium-purple': '#898AC4', // Orange-red
         "lightest-purple": '#C0C9EE', // Pink-Neon
         "yellow-neon": '#FFFF80',
         'dull-pink': '#A64D79',

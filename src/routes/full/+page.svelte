@@ -243,7 +243,7 @@
   <!-- Home Button -->
   <div class="mt-8 sm:mt-10 md:mt-12 lg:mt-16 pb-6 sm:pb-8 md:pb-10">
     <a href="/" 
-      class="font-dm-mono font-semibold text-darkest-purple bg-lightest-purple border border-4 border-darkest-purple rounded-lg p-2.5 hover:scale-105 transition-transform text-sm sm:text-base hover:text-lightest-purple hover:bg-darkest-purple">
+      class="font-dm-mono font-semibold text-darkest-purple bg-lightest-purple border border-4 border-lightest-purple rounded-lg p-2.5 hover:scale-105 transition-transform text-sm sm:text-base hover:text-lightest-purple hover:bg-darkest-purple hover:border-darkest-purple">
       Home
     </a>
   </div>

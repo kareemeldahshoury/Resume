@@ -53,22 +53,22 @@
   <div class="mt-5 flex flex-col sm:flex-row gap-4 sm:gap-0 items-center justify-center w-full max-w-4xl px-4">
     <a
       href="/experiences"
-      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
+      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-lightest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple hover:border-darkest-purple"
       >Experiences</a
     >
     <a
       href="/projects"
-      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
+      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-lightest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple hover:border-darkest-purple"
       >Projects</a
     >
     <a
       href="/full"
-      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
+      class="w-full sm:w-auto sm:mr-4 md:mr-6 lg:mr-10 font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-lightest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple hover:border-darkest-purple"
       >Full Resume</a
     >
     <a
       href="/about"
-      class="w-full sm:w-auto font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-darkest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple"
+      class="w-full sm:w-auto font-dm-mono font-semibold text-darkest-purple bg-lightest-purple rounded-lg p-2.5 border border-4 border-lightest-purple text-center hover:scale-105 transition-transform hover:text-lightest-purple hover:bg-darkest-purple hover:border-darkest-purple"
       >About</a
     >
   </div>
