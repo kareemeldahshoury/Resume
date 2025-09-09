@@ -1,28 +1,33 @@
+version: '3.8'
 services:
-  backend:
-    build:
-      context: .
+  resume-backend:
+    build: 
+      context: ./src/lib/server
       dockerfile: Dockerfile.backend
-      platforms:
-        - linux/amd64
-    working_dir: /app/server
-    command: ["python", "app.py"]
+    container_name: resume-backend
     ports:
       - "3000:3000"
     environment:
       - FLASK_ENV=production
     volumes:
-      - ~/.aws:/root/.aws:ro
-    restart: always
+      - ./server:/app
+    networks:
+      - resume-network
 
   frontend:
-    build:
+    build: 
       context: .
       dockerfile: Dockerfile.frontend
-      platforms:
-        - linux/amd64
+    container_name: resume-frontend
     ports:
       - "80:80"
     depends_on:
-      - backend
-    restart: always
+      - resume-backend
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - resume-network
+
+networks:
+  resume-network:
+    driver: bridge
