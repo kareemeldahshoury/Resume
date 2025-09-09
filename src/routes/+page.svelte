@@ -23,7 +23,10 @@
       //pageRefreshed.set(true);
 
       // Fetch from the API to update the visitor count
-      fetch("http://localhost:3000/api", { cache: "no-store" })
+      fetch("/api", { 
+        cache: "no-store",
+        credentials: 'include' 
+      })
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);

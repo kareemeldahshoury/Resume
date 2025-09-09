@@ -107,7 +107,7 @@ def visit():
             "true", 
             max_age=3600,  # 1 hour in seconds
             samesite='Lax',
-            secure=False,  # Set to True if using HTTPS
+            secure=True,  # Set to True if using HTTPS
             httponly=False  # Allow JavaScript access if needed
         )
         
