@@ -100,7 +100,7 @@
           </li>
         </ul>
       </div>
-      <a href="http://kareemoeldahshoury.com/" target='_blank' 
+      <a href="https://kelda.dev/" target='_blank' 
         class="flex justify-center font-dm-mono text-light-purple text-xl sm:text-2xl md:text-3xl text-blue-600 p-2.5 hover:text-blue-800 transition-colors">
         kareemoeldahshoury.com
       </a>
