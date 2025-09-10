@@ -7,7 +7,7 @@
     <div class="w-full shadow-[0_0_9px_rgba(0,0,0,0.2)] rounded-xl bg-white">
       <div class="p-4 sm:p-5 md:p-6">
         <p class="mt-2 sm:mt-3 font-dm-mono font-semibold text-sm sm:text-base">USFAAF | Software Engineer Intern | January 2025 - May 2025</p>
-        <ul class="mt-3 sm:mt-4 list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
+        <ul class="mt-3 sm:mt-4 font-dm-mono list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
           <li>
             Developed a secure web application that enabled 200+ clients to safely upload tax documents using Svelte and Go, ensuring
             compliance with secure coding practices and reducing document processing time by 30%
@@ -27,7 +27,7 @@
     <div class="w-full shadow-[0_0_9px_rgba(0,0,0,0.2)] rounded-xl bg-white">
       <div class="p-4 sm:p-5 md:p-6">
         <p class="mt-2 sm:mt-3 font-dm-mono font-semibold text-sm sm:text-base"> NASA | Software Engineer Intern | Jun 2024 - AUG 2024</p>
-        <ul class="mt-3 sm:mt-4 list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
+        <ul class="mt-3 sm:mt-4 font-dm-mono list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
           <li>
             Re-designed the framework of NOS3, NASA’s small satellite simulator, improving usability for developers by enabling execution
             on a local Linux environment, by reconfiguring dependencies and system architecture
@@ -43,7 +43,7 @@
     <div class="w-full shadow-[0_0_9px_rgba(0,0,0,0.2)] rounded-xl bg-white">
       <div class="p-4 sm:p-5 md:p-6">
         <p class="mt-2 sm:mt-3 font-dm-mono font-semibold text-sm sm:text-base">UMN Data Lab (IHARP) | Undergraduate Researcher | Aug 2023 – June 2025</p>
-        <ul class="mt-3 sm:mt-4 list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
+        <ul class="mt-3 sm:mt-4 font-dm-mono list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
           <li>
             Reduced data processing times from 60+ hours to under 1 hour by implementing optimized Python query logic with Xarray,
             Pandas, and NumPy, improving efficiency in handling large-scale datasets
@@ -64,7 +64,7 @@
     <div class="w-full shadow-[0_0_9px_rgba(0,0,0,0.2)] rounded-xl bg-white">
       <div class="p-4 sm:p-5 md:p-6">
         <p class="mt-2 sm:mt-3 font-dm-mono font-semibold text-sm sm:text-base">UMN Data Lab (OSRM) | Undergraduate Researcher - OSRM | April 2023 – Aug 2023</p>
-        <ul class="mt-3 sm:mt-4 list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
+        <ul class="mt-3 sm:mt-4 font-dm-mono list-disc list-inside text-sm sm:text-base space-y-1 sm:space-y-2">
           <li>
             Facilitated the evaluation of ETA functionality in OpenStreetMap by providing travel-time estimates, through querying various
             open-source mapping software with Python using libraries such as Requests, Pandas, and JSON
